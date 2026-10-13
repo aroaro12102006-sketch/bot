@@ -1,4 +1,5 @@
 import datetime
+import os
 import json
 import threading
 from flask import Flask, render_template
@@ -128,4 +129,5 @@ if __name__ == '__main__':
     flask_thread.start()
     print("🌐 Strona internetowa została uruchomiona!")
 
-    bot.run('MTU1OTUxNjgwOTcxNDA3NzcxNw.GFWejH.dXIJ2u2P5kqFO8-F8HHpApoewiBGwU1JpnZlpU')
+    token = os.environ.get('DISCORD_TOKEN')
+    bot.run(token)
