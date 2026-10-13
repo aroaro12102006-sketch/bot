@@ -123,14 +123,11 @@ async def before_sprawdz_urodziny():
     await bot.wait_until_ready()
 
 # --- URUCHOMIENIE ---
-# --- URUCHOMIENIE ---
 if __name__ == '__main__':
     flask_thread = threading.Thread(target=run_flask)
     flask_thread.daemon = True
     flask_thread.start()
     print("🌐 Strona internetowa została uruchomiona!")
 
-    # Wpisujemy token bezpośrednio, aby pominąć problemy ze zmiennymi środowiskowymi na Renderze
-    bot.run('MTU1OTUxNjgwOTcxNDA3NzcxNw.GFWejH.dXIJ2u2P5kqFO8-F8HHpApoewiBGwU1JpnZlpU')
     token = os.environ.get('DISCORD_TOKEN')
     bot.run(token)
