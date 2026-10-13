@@ -131,3 +131,6 @@ if __name__ == '__main__':
 
     token = os.environ.get('DISCORD_TOKEN')
     bot.run(token)
+
+    token = os.environ.get('DISCORD_TOKEN')
+    bot.run(token)
