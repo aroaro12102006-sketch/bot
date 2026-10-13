@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Urodzinowy - Panel</title>
+    <style>
+        body {
+            background-color: #313338;
+            color: #dbdee1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #2b2d31;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        h1 { color: #ffffff; }
+        .badge {
+            background: #5865f2;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+        li {
+            background: #111214;
+            padding: 12px 18px;
+            margin: 8px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .date {
+            color: #fEE75C;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎂 Bot Urodzinowy</h1>
+        <div class="badge">Status: Online 🟢</div>
+        <p>Witaj na oficjalnej stronie bota! Poniżej znajdziesz listę zarejestrowanych urodzin użytkowników z serwera:</p>
+        
+        <ul>
+            {% if urodziny %}
+                {% for user_id, data in urodziny.items() %}
+                    <li>
+                        <span>Użytkownik ID: <code>{{ user_id }}</code></span>
+                        <span class="date">📅 {{ data }}</span>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p style="text-align: center; color: #949ba4;">Brak zapisanych urodzin w bazie.</p>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+</html>
