@@ -128,4 +128,4 @@ if __name__ == '__main__':
     flask_thread.start()
     print("🌐 Strona internetowa została uruchomiona!")
 
-    bot.run('MTU1OTUxNjgwOTcxNDA3NzcxNw.GZhxTr.ADZSvCGEeWhJGeKpatwdqlXH9_89MEDxq3JFLE')
+    bot.run('MTU1OTUxNjgwOTcxNDA3NzcxNw.GFWejH.dXIJ2u2P5kqFO8-F8HHpApoewiBGwU1JpnZlpU')
