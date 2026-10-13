@@ -129,5 +129,4 @@ if __name__ == '__main__':
     flask_thread.start()
     print("🌐 Strona internetowa została uruchomiona!")
 
-    token = os.environ.get('DISCORD_TOKEN')
-    bot.run(token)
+    bot.run('MTU1OTUxNjgwOTcxNDA3NzcxNw.GDngpg.-OnHz3hN118uqr1zreHwwnxHZRPMKTmUWBK5Uk')
