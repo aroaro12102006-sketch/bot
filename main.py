@@ -130,7 +130,10 @@ if __name__ == '__main__':
     print("🌐 Strona internetowa została uruchomiona!")
 
     token = os.environ.get('DISCORD_TOKEN')
-    bot.run(token)
+    if not token:
+        print("BŁĄD: Nie znaleziono zmiennej środowiskowej DISCORD_TOKEN!")
+    else:
+        bot.run(token)
 
     token = os.environ.get('DISCORD_TOKEN')
     bot.run(token)
